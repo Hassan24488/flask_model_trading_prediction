@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MLOPS Assignment 2</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  </head>
+  <body>
+    <h1>MLOPS Assignment 2</h1>
+    <form method="POST" action="/">
+      <label for="input1">Input 1:</label>
+      <input type="text" id="input1" name="input1"><br><br>
+      <input type="submit" value="Submit"><br><br>
+      <label for="input2">Input 2:</label>
+      <input type="text" id="input2" name="input2"><br><br>
+      <input type="submit" value="Submit"><br><br>
+      <label for="input3">Input 3:</label>
+      <input type="text" id="input3" name="input3"><br><br>
+      <input type="submit" value="Submit">
+    </form>
+    <div id="output"></div>
+    <div id="plot"></div>
+  </body>
+  <script>
+    var x = [1, 2, 3, 4, 5];
+    var y = [1, 4, 2, 3, 7];
+
+    var trace1 = {
+      x: x,
+      y: y,
+      type: 'scatter'
+    };
+
+    var data = [trace1];
+
+    Plotly.newPlot('plot', data);
+
+    var outputDiv = document.getElementById('output');
+
+    var form = document.querySelector('form');
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      var input1 = document.getElementById('input1').value;
+      var input2 = document.getElementById('input2').value;
+      var input3 = document.getElementById('input3').value;
+      // Process the inputs and generate the output
+      var output = 'Output: ' + input1 + ', ' + input2 + ', ' + input3;
+      outputDiv.innerHTML = output;
+    });
+  </script>
+</html>
