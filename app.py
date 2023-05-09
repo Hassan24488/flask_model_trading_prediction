@@ -15,7 +15,8 @@ train_model()
 
 @app.route('/price')
 def get_price():
-    datetime_str,price,high_price,low_price,bid,bidVolume,ask,askVolume,vwap,previousClose,change,percentage,average,baseVolume,quoteVolume,invalue,datetime_str1=a1.live_Price_Display()    
+            datetime_str,price,high_price,low_price,bid,bidVolume,ask,askVolume,vwap,open1,close1,previousClose,change,percentage,average,baseVolume,quoteVolume,invalue,datetime_str1
+=a1.live_Price_Display()    
     # Return a JSON  response with the datetime and price
     
     response = {'datetime': datetime_str, 'price': price,'high_price' : high_price ,
