@@ -90,3 +90,12 @@ class live_predict:
         return predicted_value
     
 
+# a1=live_predict()
+# a1.make_data_and_train()
+# f=1679420411606#a1.exchange.fetch_ticker(a1.symbol)['timestamp']
+# print(f)
+# f+=10000
+# f1=int(f/1000)
+# f2=dt.datetime.fromtimestamp(f1)
+# #datetime_obj = pd.to_datetime(f2, unit='ms')
+# print(f2)   
