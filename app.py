@@ -15,12 +15,12 @@ train_model()
 
 @app.route('/price')
 def get_price():
-    datetime_str,price,high_price,low_price,bid,bidVolume,ask,askVolume,vwap,open1,close1,previousClose,change,percentage,average,baseVolume,quoteVolume,invalue,datetime_str1=a1.live_Price_Display()    
+    datetime_str,price,high_price,low_price,bid,bidVolume,ask,askVolume,vwap,previousClose,change,percentage,average,baseVolume,quoteVolume,invalue,datetime_str1=a1.live_Price_Display()    
     # Return a JSON  response with the datetime and price
     
     response = {'datetime': datetime_str, 'price': price,'high_price' : high_price ,
-                'Open1':open1,'bidVolume':bidVolume  ,'bid':bid ,'low_price':low_price ,
-                'ask':ask,'askVolume':askVolume ,'vwap':vwap,'close1':close1,
+                'bidVolume':bidVolume  ,'bid':bid ,'low_price':low_price ,
+                'ask':ask,'askVolume':askVolume ,'vwap':vwap,
                 'previousClose':previousClose,'change':change,'percentage':percentage,
                 'average':average,'baseVolume':baseVolume,'quoteVolume':quoteVolume, 'future_date': datetime_str1, 
                 'future_price': invalue}
